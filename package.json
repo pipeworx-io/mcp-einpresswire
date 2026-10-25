@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-einpresswire",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "EIN Presswire MCP — press releases from EIN Presswire's public news sitemap.",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-ea20e6a8e6591b6bc34e36f63db8de132f0adc2cbde116b39a60764b5bfeaf35",
-    "sourceCommit": "5749f83c0ea115fab4c0c0ef04b66b05f2507d67"
+    "sourceHash": "v1-42fda7e64bf39f2a9c02edc07eb2d0406aebd3e43e274e7ec1ac2c61df3632fd",
+    "sourceCommit": "29fb434ca65fe0f61191f19c3502f583f5fb99d7"
   }
 }

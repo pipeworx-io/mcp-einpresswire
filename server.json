@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/einpresswire",
   "title": "Einpresswire",
   "description": "EIN Presswire MCP — press releases from EIN Presswire's public news sitemap.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "websiteUrl": "https://pipeworx.io/packs/einpresswire",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-einpresswire",
