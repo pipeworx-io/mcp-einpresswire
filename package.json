@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-einpresswire",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "EIN Presswire MCP — press releases from EIN Presswire's public news sitemap.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-einpresswire": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "einpresswire"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-einpresswire.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/einpresswire",
   "pipeworx": {
-    "sourceHash": "v1-42fda7e64bf39f2a9c02edc07eb2d0406aebd3e43e274e7ec1ac2c61df3632fd",
-    "sourceCommit": "29fb434ca65fe0f61191f19c3502f583f5fb99d7"
+    "mode": "gateway",
+    "slug": "einpresswire",
+    "gatewaySlug": "einpresswire",
+    "sourceHash": "v1-d0286ff79e3bb220ab4d4bb04b1fbc50c5a70592ab2831758cf25580a282e6db",
+    "sourceCommit": "bb047243cf27f32453103de186b8e6a8b6a1ce79"
   }
 }

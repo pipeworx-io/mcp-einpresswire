@@ -1,0 +1,55 @@
+[
+  {
+    "name": "einpresswire_latest_releases",
+    "description": "Latest press releases from EIN Presswire's public news sitemap (source: einpresswire.com). Returns headline, published time, keyword tags and geo location for each release, newest first. Covers roughly the trailing 48 hours across every category — not a full archive, and not the gated RSS feeds.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "since_hours": {
+          "type": "number",
+          "description": "Only return releases published within the last N hours (optional, max ~48)."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max releases to return, 1-100 (default 20)."
+        }
+      }
+    }
+  },
+  {
+    "name": "einpresswire_search_releases",
+    "description": "Keyword/company search over EIN Presswire's current news sitemap (source: einpresswire.com). Matches against headline, keyword tags and geo location — there is no body excerpt in this source. Searches only the trailing ~48-hour window each call, not a historical archive.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Company name, place or keyword to match."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max matches to return (default 20)."
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "einpresswire_get_release",
+    "description": "Fetch one specific EIN Presswire release by its URL (source: einpresswire.com), as returned by einpresswire_latest_releases or einpresswire_search_releases. Re-fetches the live sitemap each call — a release older than roughly 48 hours will not be found.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "The release URL (from a prior einpresswire tool call)."
+        }
+      },
+      "required": [
+        "url"
+      ]
+    }
+  }
+]
